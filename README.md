@@ -36,3 +36,8 @@ messy cables aren't a problem.
 USB MIDI should work out of the box with most modern USB MIDI controllers that stablish a MIDI
 device at port 20 (but I've only tested an Android USB MIDI, 2 USB MIDI keybords and a USB MIDI
 adapter).
+
+The code is written in micropython for MINDSTORMS EV3. It uses the great 'pybricks' library to
+glue all the different LEGO actuators and sensors and makes some system calls to the operating
+system (ev3dev, a great version of Debian Linux for the MINDSTORMS EV3) to interact with the
+Linux ALSA subsystem for the MIDI operations.
