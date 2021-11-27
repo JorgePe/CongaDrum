@@ -21,8 +21,8 @@ ts2 = TouchSensor(Port.S2)      # Drum
 snd = SoundSensor(Port.S3)      # Hand Clap
 ir  = InfraredSensor(Port.S4)   # Remote
 
-DEBOUNCE = 275    # time between button presses or hand claps
-SND_THRESHOLD = 45
+DEBOUNCE = 275       # time between button presses or hand claps
+SND_THRESHOLD = 55   # sensitivity of the sound sensor
 
 # Notation used on metronome and beatbox beats
 MARK_A = 'A'
