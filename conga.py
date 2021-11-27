@@ -99,7 +99,7 @@ M_USBMIDI = 2
 M_METRONOME = 3
 M_BEATBOX = 4
 M_LEARN = 5
-M_UNUSED = 6
+M_REST = 6
 
 MODE1_MIN = -30  # min is 0, this is to adjust middle
 MODE1_MAX = 30
@@ -120,7 +120,7 @@ MODE_SPEAK=["",
     "Metronome",
     "Beatbox",
     "Learn",
-    "Not used"]
+    "Rest"]
 
 MIDI_FIFO = '/dev/shm/midipipe'
 
@@ -139,7 +139,7 @@ def get_mode():
         elif MODE5_MIN <= angle <= MODE5_MAX:
             mode = M_LEARN
         elif MODE6_MIN <= angle <= MODE6_MAX:
-            mode = M_UNUSED
+            mode = M_REST
         else:
             mode = 0
 
@@ -501,7 +501,7 @@ def main_thread():
                     # clear Learn Beat
                     beat = 2
                     beats[beat].clear()
-                elif current_mode == M_UNUSED :
+                elif current_mode == M_REST :
                    # not used yet
                     pass
         wait(100)
@@ -518,7 +518,7 @@ bpm = 90
 #current_mode = M_METRONOME
 #current_mode = M_BEATBOX
 #current_mode = M_LEARN
-current_mode = M_UNUSED
+current_mode = M_REST
 
 metro = 0 # default metronome
 beat = 0 # default beat
@@ -536,7 +536,7 @@ elif current_mode == M_BEATBOX :
     pos = MODE4_MIN + (MODE4_MAX - MODE4_MIN)/2
 elif current_mode == M_LEARN :
     pos = MODE5_MIN + (MODE5_MAX - MODE5_MIN)/2
-elif current_mode == M_UNUSED :
+elif current_mode == M_REST :
     pos = MODE6_MIN + (MODE6_MAX - MODE6_MIN)/2
 mD.run_target(180, pos, then=Stop.COAST, wait=True)
 
