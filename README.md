@@ -30,7 +30,7 @@ to Mute Conga and Hi Conga events on the standard MIDI Percussion Channel.
 
 IP MIDI (also known as Multicast MIDI) is used by some MIDI software tools so we can use the 
 Conga Drum as a wireless MIDI instrument though the Wi-Fi USB dongle. It requires a good Wi-Fi
-connection with low latency for fast rhytms so USB MIDI will be a better option if using long and
+connection with low latency for fast rhythms so USB MIDI will be a better option if using long and
 messy cables aren't a problem.
 
 USB MIDI should work out of the box with most modern USB MIDI controllers that stablish a MIDI
