@@ -48,8 +48,8 @@ glue all the different LEGO actuators and sensors and makes some system calls to
 system (ev3dev, a great version of Debian Linux for the MINDSTORMS EV3) to interact with the
 Linux ALSA subsystem for the MIDI operations:
 - a FIFO is created to be used as a pipe between the micropython script and the USB devices
-- 'multimidicast' is started in background (this assignes 128:0 to Multicast/IP MIDI as long
+- 'multimidicast' is started in background (this assigns 128:0 to Multicast/IP MIDI as long
 as there is already a network interface present)
 - each time a USB mode (IP or USB) is selected a connection between the FIFO and the MIDI device
-(20:0 for USB, 128:0 for IP) is recreated through 'aseqdump' (an ALSA tool that captures 
+(20:0 for USB, 128:0 for IP) is recreated trough 'aseqdump' (an ALSA tool that captures 
 the data stream from a MIDI device)
