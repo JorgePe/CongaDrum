@@ -36,7 +36,8 @@ IP MIDI (also known as Multicast MIDI) is used by some MIDI software tools like 
 'qmidinet' so we can use them with the Conga Drum as a wireless MIDI instrument (trough a Wi-Fi
 USB dongle). It requires a good Wi-Fi connection with low latency for fast rhythms so USB MIDI
 will be a better option if using long and messy cables aren't a problem.
-It requires an extra tool, '[multimidicast](https://llg.cubic.org/tools/multimidicast/)'.
+It requires an extra tool, '[multimidicast](https://llg.cubic.org/tools/multimidicast/)', it can
+be compiled on the EV3 but I already include the compiled version if someone needs it.
 
 USB MIDI should work out of the box with most modern USB MIDI controllers that stablish a MIDI
 device at port 20 (I've only tested an Android USB MIDI, 2 USB MIDI keybords, a USB MIDI
