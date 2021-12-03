@@ -36,20 +36,20 @@ IP MIDI (also known as Multicast MIDI) is used by some MIDI software tools like 
 'qmidinet' so we can use them with the Conga Drum as a wireless MIDI instrument (trough a Wi-Fi
 USB dongle). It requires a good Wi-Fi connection with low latency for fast rhythms so USB MIDI
 will be a better option if using long and messy cables aren't a problem.
-It requires an extra tool, 'multimidicast'.
+It requires an extra tool, '[multimidicast](https://llg.cubic.org/tools/multimidicast/)'.
 
 USB MIDI should work out of the box with most modern USB MIDI controllers that stablish a MIDI
 device at port 20 (I've only tested an Android USB MIDI, 2 USB MIDI keybords, a USB MIDI
 adapter and a PLAYTRON controller). It requires the MIDI controller to be attached to the EV3
 USB 1.1 port so if using Wi-Fi a small USB hub is also needed.
 
-The code is written in micropython for MINDSTORMS EV3. It uses the great 'pybricks' library to
-glue all the different LEGO actuators and sensors and makes some system calls to the operating
+The code is written in micropython for MINDSTORMS EV3. It uses the great '[pybricks](https://pybricks.com/)'
+library to glue all the different LEGO actuators and sensors and makes some system calls to the operating
 system (ev3dev, a great version of Debian Linux for the MINDSTORMS EV3) to interact with the
 Linux ALSA subsystem for the MIDI operations:
 - a FIFO is created to be used as a pipe between the micropython script and the USB devices
-- 'multimidicast' is started in background (this assigns 128:0 to Multicast/IP MIDI as long
-as there is already a network interface present)
+- '[multimidicast](https://llg.cubic.org/tools/multimidicast/)' is started in background (this assigns
+ 128:0 to Multicast/IP MIDI as long as there is already a network interface present)
 - each time a USB mode (IP or USB) is selected a connection between the FIFO and the MIDI device
 (20:0 for USB, 128:0 for IP) is recreated trough 'aseqdump' (an ALSA tool that captures 
 the data stream from a MIDI device)
